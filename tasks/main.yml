@@ -16,7 +16,7 @@
 - name: Set mail aliases
   lineinfile:
     path: /etc/aliases
-    line: '{{ item.alias }}: {{ destination | default(item.alias) }}@library.ucla.edu'
+    line: '{{ item.alias }}: {{ item.destination | default(item.alias) }}@library.ucla.edu'
     state: present
     regexp: '^{{ item.alias }}:.*$'
     owner: root
