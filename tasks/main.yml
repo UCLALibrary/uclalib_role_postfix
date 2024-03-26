@@ -1,0 +1,15 @@
+---
+
+- name: Install Postfix
+  package:
+    name: postfix
+    state: present
+
+- name: Install UCLA Postfix configuration
+  copy:
+    dest: /etc/postfix/main.cf
+    src: main.cf
+    owner: root
+    group: root
+    mode: '0444'
+    validate: '/sbin/postconf'

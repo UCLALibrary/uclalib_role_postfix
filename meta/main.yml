@@ -1,0 +1,19 @@
+galaxy_info:
+  role_name: uclalib_role_postfix
+  namespace: uclalibrary
+  author: John H. Robinson, IV <jhriv@ucla.edu>
+  description: Installs Postfix MTA
+  company: UCLA Library
+
+  license: BSD-3-Clause
+
+  min_ansible_version: '2.1'
+
+  platforms:
+    - name: EL
+      version:
+        - '8'
+
+  galaxy_tags: []
+
+dependencies: []
