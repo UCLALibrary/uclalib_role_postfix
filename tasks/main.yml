@@ -13,6 +13,21 @@
     group: root
     mode: '0444'
 
+- name: Set mail aliases
+  lineinfile:
+    path: /etc/aliases
+    line: '{{ item.alias }}: {{ destination | default(item.alias) }}@library.ucla.edu'
+    state: present
+    regexp: '^{{ item.alias }}:.*$'
+    owner: root
+    group: root
+    mode: '0444'
+  loop:
+    - { alias: 'root', destination: 'lib_devsupport' }
+    - { alias: 'avuong' }
+    - { alias: 'jhriv' }
+    - { alias: 'sgurnick' }
+
 - name: Enable Postfix
   service:
     name: postfix
