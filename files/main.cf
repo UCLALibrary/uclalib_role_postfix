@@ -20,7 +20,6 @@ manpage_directory = /usr/share/man
 meta_directory = /etc/postfix
 mydestination = $myhostname, localhost.$mydomain, localhost
 mydomain = library.ucla.edu
-myorigin = $mydomain
 newaliases_path = /usr/bin/newaliases.postfix
 queue_directory = /var/spool/postfix
 readme_directory = /usr/share/doc/postfix/README_FILES
