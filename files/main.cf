@@ -1,5 +1,5 @@
 # UCLA Library Postfix Configuration
-# {{ ansible_managed }}
+# Ansible Managed - DO NOT EDIT
 
 alias_database = hash:/etc/aliases
 alias_maps = hash:/etc/aliases
