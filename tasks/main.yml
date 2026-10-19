@@ -24,12 +24,13 @@
     mode: '0444'
   loop:
     - { alias: 'root', destination: 'lib_devsupport' }
+    - { alias: 'alexandrias' }
     - { alias: 'avuong' }
     - { alias: 'jhriv' }
-    - { alias: 'sgurnick' }
 
 - name: Enable Postfix
   service:
     name: postfix
     state: started
     enabled: true
+  ignore_errors: '{{ ansible_check_mode }}'
